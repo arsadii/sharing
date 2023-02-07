@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      /* Reset sizing */
+      *,
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* Set everything to center of the screen */
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /*Card container*/
+      .card-container {
+        border-radius: 10px;
+        border: 1px solid rgb(224, 224, 224);
+        padding: 0.25rem;
+        box-shadow: 10px 10px 50px rgba(128, 128, 128, 0.335);
+        display: flex;
+      }
+
+      /* Image */
+      .card-container img {
+        width: 200px;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <img
+        width="100px"
+        src="./kenny-eliason-Pfa7Soh0euw-unsplash.jpg"
+        alt="photo"
+      />
+    </div>
+  </body>
+</html>
