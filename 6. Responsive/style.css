@@ -32,8 +32,7 @@ html {
   color: rgb(30, 30, 30);
 }
 
-/* Ukuran smartphone */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     flex-direction: column;
   }
@@ -43,19 +42,18 @@ html {
   }
 }
 
-/* Ukuran tablet */
-@media (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
   .container div {
-    font-size: 2rem;
+    font-size: 4rem;
   }
+}
 
-  .world {
-    background-color: rgb(30, 30, 30);
-    color: rgb(235, 235, 235);
-  }
-
-  .hello {
-    background-color: rgb(235, 235, 235);
-    color: rgb(30, 30, 30);
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .container div {
+    font-size: 4rem;
   }
 }
