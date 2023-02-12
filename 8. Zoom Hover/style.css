@@ -1,0 +1,39 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 4px solid white;
+  box-shadow: 10px 10px 20px rgb(207, 207, 207);
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all;
+  transition-duration: 500ms;
+  filter: grayscale(1);
+}
+
+.card img:hover {
+  transform: scale(1.25);
+  filter: grayscale(0);
+}
