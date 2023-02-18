@@ -83,13 +83,13 @@ const ButtonWrapper = () => {
   ];
 
   return (
-    <div className="flex-grow">
+    <div className="flex-grow ">
       <div className="grid w-full h-full grid-cols-4 gap-2">
         {CalcButtons.map((btn) => {
           return (
             <div
               key={btn.label}
-              className={`w-full col-span-${btn.span} min-h-[82px]`}
+              className={`min-w-[86px] col-span-${btn.span} min-h-[82px]`}
             >
               <Button type={btn.type}>{btn.label}</Button>
             </div>
