@@ -1,0 +1,45 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.my-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(10, 118, 233);
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.253);
+}
+
+.my-btn:active {
+  transform: scale(1.05);
+}
+
+.my-btn::after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
+  filter: blur(3px);
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.576);
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+}
