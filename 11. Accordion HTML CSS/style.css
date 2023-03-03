@@ -1,0 +1,70 @@
+:root {
+  --gray: rgb(245, 245, 245);
+  --dark-gray: rgb(235, 235, 235);
+  --font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  padding: 1rem;
+}
+
+.accordion-wrapper {
+  box-shadow: 10px 10px 10px rgba(210, 210, 210, 0.102);
+  overflow: hidden;
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+}
+
+.accordion-wrapper .accordion-title {
+  background-color: var(--gray);
+  padding: 0.5rem;
+  border-radius: 0;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+.accordion-wrapper .accordion-title:hover {
+  background-color: var(--dark-gray);
+}
+
+.accordion-wrapper:first-of-type {
+  border-radius: 10px 10px 0 0;
+}
+
+.accordion-wrapper:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+
+.accordion-wrapper:last-of-type .accordion-title {
+  border: none;
+}
+
+.accordion-wrapper .accordion-content {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.accordion-wrapper[open] .accordion-title {
+  border-bottom: none;
+  background-color: var(--dark-gray);
+}
+
+.accordion-wrapper .accordion-title::after {
+  content: "▶️";
+}
+
+.accordion-wrapper[open] .accordion-title::after {
+  content: "🔽";
+}
